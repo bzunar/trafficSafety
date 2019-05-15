@@ -2,7 +2,7 @@
 title: "Basics of the 'trafficSafety' Package"
 author: "Bojan Zunar"
 date: "`r format(Sys.time(), '%d %m %Y')`"
-output: BiocStyle::html_document
+output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{basics}
   %\VignetteEngine{knitr::rmarkdown}
