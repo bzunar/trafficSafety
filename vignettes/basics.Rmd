@@ -29,7 +29,8 @@ Package 'trafficSafety' was primarily created for the Coursera's 'Building R Pac
 The package comes with three files that list fatalities throughout the years 2013-2015. They can be loaded with function `fars_read` which outputs a tibble. For the convenience, filenames can also be generated through a helper function `make_filename`.
 
 ```{r loadData}
-# library(trafficSafety)
+library(trafficSafety)
+
 # external data bundled with the package
 y13 <- system.file("extdata", "accident_2013.csv.bz2", package = "trafficSafety")
 y14 <- system.file("extdata", "accident_2014.csv.bz2", package = "trafficSafety")
