@@ -30,9 +30,6 @@ The package comes with three files that list fatalities throughout the years 201
 
 ```{r loadData}
 # library(trafficSafety)
-library(devtools)
-load_all()
-getwd()
 # external data bundled with the package
 y13 <- system.file("extdata", "accident_2013.csv.bz2", package = "trafficSafety")
 y14 <- system.file("extdata", "accident_2014.csv.bz2", package = "trafficSafety")
