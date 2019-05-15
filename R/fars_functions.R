@@ -19,8 +19,10 @@
 #' @importFrom dplyr tbl_df
 #'
 #' @examples
+#' \dontrun{
 #' fars_read("accident_2013.csv.bz2")
 #' fars_read(make_filename(2013))
+#' }
 #'
 #' @export
 fars_read <- function(filename) {
@@ -74,8 +76,10 @@ make_filename <- function(year) {
 #' list entry with NULL value.
 #'
 #' @examples
+#' \dontrun{
 #' fars_read_years(c(2013, 2014))
 #' fars_read_years(c(2013, 2017, 2014))
+#' }
 #'
 #' @export
 fars_read_years <- function(years) {
@@ -111,7 +115,9 @@ fars_read_years <- function(years) {
 #' @importFrom tidyr spread
 #'
 #' @examples
+#' \dontrun{
 #' fars_summarize_years(c(2013, 2014))
+#' }
 #'
 #' @export
 fars_summarize_years <- function(years) {
@@ -145,7 +151,9 @@ fars_summarize_years <- function(years) {
 #' @importFrom graphics points
 #'
 #' @examples
+#' \dontrun{
 #' fars_map_state(10, 2014)
+#' }
 #'
 #' @export
 fars_map_state <- function(state.num, year) {
