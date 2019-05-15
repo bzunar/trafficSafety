@@ -64,7 +64,7 @@ fars_summarize_years(c(2013, 2014, 2015))
 Finally, one can visualise where the accidents occured for a specific state in the specified year using the `fars_map_state` function.
 
 ```{r visualise, fig.align = "center"}
-fars_map_state(10, 2014)
+fars_map_state(1, 2014)
 ```
 
 ```{r sessionInfo}
