@@ -1,0 +1,75 @@
+---
+title: "Basics of the 'trafficSafety' Package"
+author: "Bojan Zunar"
+date: "`r format(Sys.time(), '%d %m %Y')`"
+output: BiocStyle::html_document
+vignette: >
+  %\VignetteIndexEntry{basics}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+wd <- dirname(system.file("extdata", "accident_2013.csv.bz2", package = "trafficSafety"))
+```
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+knitr::opts_knit$set(root.dir = wd)
+```
+
+Package 'trafficSafety' was primarily created for the Coursera's 'Building R Packages' course. It contains a number of functions that load, summarise, and visualise data from the US National Highway Traffic Safety Administration's 'Fatality Analysis Reporting System', which is a nationwide census providing the American public yearly data regarding fatal injuries suffered in motor vehicle traffic crashes.
+
+# Loading the Dataset
+
+The package comes with three files that list fatalities throughout the years 2013-2015. They can be loaded with function `fars_read` which outputs a tibble. For the convenience, filenames can also be generated through a helper function `make_filename`.
+
+```{r loadData}
+# library(trafficSafety)
+library(devtools)
+load_all()
+getwd()
+# external data bundled with the package
+y13 <- system.file("extdata", "accident_2013.csv.bz2", package = "trafficSafety")
+y14 <- system.file("extdata", "accident_2014.csv.bz2", package = "trafficSafety")
+y15 <- system.file("extdata", "accident_2015.csv.bz2", package = "trafficSafety")
+
+# load the data
+fars13 <- fars_read(y13)
+head(fars13, 3)
+
+# helper function
+make_filename(2013)
+system.file("extdata", make_filename(2013), package = "trafficSafety")
+```
+
+Several years worth of data can also be imported using the function `fars_read_years` which will extract only months and year, saving data from each file as a separate element of the list.
+
+```{r manyYears}
+fars_read_years(c(2013, 2014))
+```
+
+# Summarise Number of Accidents
+
+One can summarise the number of accidents by using `fars_summarize_years` function.
+
+```{r summarise}
+fars_summarize_years(c(2013, 2014, 2015))
+```
+
+# Visualise Loaction of the Accidents
+
+Finally, one can visualise where the accidents occured for a specific state in the specified year using the `fars_map_state` function.
+
+```{r visualise, fig.align = "center"}
+fars_map_state(10, 2014)
+```
+
+```{r sessionInfo}
+sessionInfo()
+```
+
