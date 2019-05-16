@@ -14,6 +14,7 @@ Imports:
     magrittr,
     maps,
     readr,
+    testthat,
     tidyr
 Suggests: 
     knitr,
