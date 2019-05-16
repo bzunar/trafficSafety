@@ -1,4 +1,5 @@
 library(testthat)
+library(trafficSafety)
 
 setwd(dirname(system.file("extdata", "accident_2013.csv.bz2", package = "trafficSafety")))
 
