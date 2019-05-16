@@ -9,8 +9,8 @@
 #' @return The function returns a tibble (a tidyverse version of the dataframe)
 #' with the data of interest.
 #'
-#' @details The function uses \code{\link{readr::read_csv}} to import the file
-#' and \code{\link{dplyr::tbl_df}} to construct the dataframe. It will not show
+#' @details The function uses readr::read_csv to import the file
+#' and dplyr::tbl_df to construct the dataframe. It will not show
 #' how it formatted each column nor its loading progress. If it fails to find a
 #' specified file, it will throw an error, notifying the user that the file does
 #' not exist. The function assumes that the file is in the current working directory.
@@ -141,7 +141,7 @@ fars_summarize_years <- function(years) {
 #'
 #' @details Internally, the function uses \code{\link{make_filename}} and
 #' \code{\link{fars_read}} functions to load the data, filters by state and plots
-#' accidents using the \code{\link{map}} function of the maps package. Only one state
+#' accidents using the map function of the maps package. Only one state
 #' and one year can be specified in the function call. If the user enters wrong
 #' state number, the function will abort, throwing out an error. If the user filters
 #' out all of the data, the function will print an appropriate message.

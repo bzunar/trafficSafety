@@ -22,7 +22,7 @@ occurred during the specified year.
 \details{
 Internally, the function uses \code{\link{make_filename}} and
 \code{\link{fars_read}} functions to load the data, filters by state and plots
-accidents using the \code{\link{map}} function of the maps package. Only one state
+accidents using the map function of the maps package. Only one state
 and one year can be specified in the function call. If the user enters wrong
 state number, the function will abort, throwing out an error. If the user filters
 out all of the data, the function will print an appropriate message.

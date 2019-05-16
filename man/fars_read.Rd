@@ -19,8 +19,8 @@ The function loads into R bz2-compressed CSV for the year of interest. Canonical
 filename can be conveniently constructed with the function \code{\link{make_filename}}.
 }
 \details{
-The function uses \code{\link{readr::read_csv}} to import the file
-and \code{\link{dplyr::tbl_df}} to construct the dataframe. It will not show
+The function uses readr::read_csv to import the file
+and dplyr::tbl_df to construct the dataframe. It will not show
 how it formatted each column nor its loading progress. If it fails to find a
 specified file, it will throw an error, notifying the user that the file does
 not exist. The function assumes that the file is in the current working directory.
