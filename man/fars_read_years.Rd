@@ -24,7 +24,9 @@ If the data for the specified year are not available, the function will create a
 list entry with NULL value.
 }
 \examples{
+\dontrun{
 fars_read_years(c(2013, 2014))
 fars_read_years(c(2013, 2017, 2014))
+}
 
 }

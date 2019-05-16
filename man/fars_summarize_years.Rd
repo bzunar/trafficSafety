@@ -23,6 +23,8 @@ Internally, the function builds on the function \code{\link{fars_read_years}}
 and summarises the data by counting the number of month-year occurrences.
 }
 \examples{
+\dontrun{
 fars_summarize_years(c(2013, 2014))
+}
 
 }

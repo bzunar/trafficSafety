@@ -26,7 +26,9 @@ specified file, it will throw an error, notifying the user that the file does
 not exist. The function assumes that the file is in the current working directory.
 }
 \examples{
+\dontrun{
 fars_read("accident_2013.csv.bz2")
 fars_read(make_filename(2013))
+}
 
 }

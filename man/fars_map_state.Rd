@@ -28,6 +28,8 @@ state number, the function will abort, throwing out an error. If the user filter
 out all of the data, the function will print an appropriate message.
 }
 \examples{
+\dontrun{
 fars_map_state(10, 2014)
+}
 
 }
